@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>DESHI | Toji Fushiguro Oversized Tee (XL)</title>
+    <!-- Google Fonts for Professional Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (Free Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafbfe;
+            color: #11181c;
+            line-height: 1.4;
+        }
+
+        /* ---------- PROFESSIONAL NAVBAR (DESHI BRAND) ---------- */
+        .deshi-nav {
+            background: #ffffff;
+            border-bottom: 1px solid #eef2f6;
+            padding: 0.9rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(0px);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: baseline;
+            gap: 2px;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-main {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #0b1423;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #0b1423 0%, #2c3e4e 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+
+        .brand-accent {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #d4af37;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #2c3e4e;
+        }
+
+        .nav-links span {
+            cursor: default;
+            color: #5b6e8c;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links span i {
+            margin-right: 6px;
+            font-size: 0.8rem;
+            color: #d4af37;
+        }
+
+        /* subtle divider */
+        .nav-links span:not(:last-child):after {
+            content: "•";
+            margin-left: 1rem;
+            color: #cfdde6;
+            font-weight: 300;
+        }
+
+        /* main container */
+        .product-container {
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 1.5rem 2rem;
+            background: #ffffff;
+            border-radius: 36px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.8rem;
+            align-items: start;
+        }
+
+        /* gallery */
+        .gallery-section {
+            position: sticky;
+            top: 5rem;
+        }
+
+        .main-image {
+            background: #f8fafd;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
+            border: 1px solid #edf2f7;
+            transition: all 0.2s;
+        }
+
+        .main-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            transition: transform 0.3s ease;
+        }
+
+        .main-image img:hover {
+            transform: scale(1.01);
+        }
+
+        .thumbnail-strip {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .thumb {
+            width: 88px;
+            height: 88px;
+            border-radius: 24px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+            background: #f8fafd;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .thumb.active {
+            border-color: #d4af37;
+            box-shadow: 0 8px 18px rgba(212, 175, 55, 0.12);
+        }
+
+        .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* info section */
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #f4efe2;
+            color: #a67c2e;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            letter-spacing: 0.3px;
+            width: fit-content;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #0b1423;
+        }
+
+        .price {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            margin-top: 0.1rem;
+        }
+
+        .current-price {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: #0b1423;
+        }
+
+        .currency {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .original-price {
+            font-size: 1rem;
+            color: #8a99aa;
+            text-decoration: line-through;
+            font-weight: 500;
+        }
+
+        .tax-note {
+            font-size: 0.75rem;
+            color: #5f6c80;
+            background: #f8fafc;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            width: fit-content;
+        }
+
+        .description {
+            border-top: 1px solid #eef2f8;
+            border-bottom: 1px solid #eef2f8;
+            padding: 1.25rem 0;
+            margin: 0.3rem 0;
+        }
+
+        .description p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #2c3e44;
+            margin-bottom: 0.9rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #1e2f3e;
+        }
+
+        .feature-list li i {
+            width: 22px;
+            color: #d4af37;
+            font-size: 1rem;
+        }
+
+        /* form */
+        .order-form {
+            margin-top: 0.4rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 0.45rem;
+            color: #1f2e3f;
+            letter-spacing: 0.2px;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border-radius: 20px;
+            border: 1.5px solid #e2e8f0;
+            background: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: 0.2s;
+            outline: none;
+            color: #0f172a;
+        }
+
+        input:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+
+        /* VISUALLY ENHANCED "S" SIZE SECTION — Only XL, but with premium "S" callout */
+        .size-premium {
+            background: linear-gradient(135deg, #fefcf7 0%, #ffffff 100%);
+            border-radius: 28px;
+            padding: 1rem 1.4rem;
+            border: 1px solid #f0e9de;
+            margin-bottom: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .size-premium::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: #d4af37;
+            opacity: 0.7;
+        }
+
+        .size-header-premium {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .size-header-premium i {
+            font-size: 1.3rem;
+            color: #c6a43b;
+        }
+
+        .size-header-premium span {
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #6f5e3c;
+        }
+
+        .size-available-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .size-xl-badge {
+            background: #0b1423;
+            border-radius: 100px;
+            padding: 0.7rem 1.6rem;
+            display: inline-flex;
+            align-items: baseline;
+            gap: 10px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+        }
+
+        .size-xl-badge .size-letter {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .size-xl-badge .size-label {
+            color: #d4af37;
+            font-weight: 500;
+            font-size: 0.7rem;
+            letter-spacing: 0.5px;
+        }
+
+        .stock-warning {
+            background: #f2f6ea;
+            padding: 0.3rem 1rem;
+            border-radius: 60px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #4a6732;
+        }
+
+        .stock-warning i {
+            margin-right: 5px;
+        }
+
+        .size-footnote {
+            font-size: 0.7rem;
+            color: #7b8c9e;
+            margin-top: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* purchase button */
+        .purchase-btn {
+            width: 100%;
+            background: #0b1423;
+            color: white;
+            border: none;
+            padding: 1rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border-radius: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.25s;
+            margin-top: 0.3rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .purchase-btn i {
+            font-size: 1.2rem;
+        }
+
+        .purchase-btn:hover {
+            background: #2a2f3f;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.2);
+        }
+
+        .secure-checkout {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.7rem;
+            color: #7f8d9e;
+            margin-top: 1rem;
+        }
+
+        hr {
+            margin: 0.3rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            color: #98a2b3;
+            border-top: 1px solid #edf2f8;
+            padding-top: 1.8rem;
+        }
+
+        @media (max-width: 880px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+            .gallery-section {
+                position: static;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .product-container {
+                margin: 1.2rem;
+                padding: 1.2rem;
+            }
+            .deshi-nav {
+                padding: 0.8rem 1.2rem;
+            }
+            .brand-main, .brand-accent {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .thumb {
+                width: 70px;
+                height: 70px;
+            }
+            .size-xl-badge .size-letter {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PROFESSIONAL NAVBAR: Only brand "DESHI" and minimal aesthetic links (no buttons) -->
+    <nav class="deshi-nav">
+        <div class="nav-container">
+            <div class="brand">
+                <span class="brand-main">DESHI</span>
+                <span class="brand-accent">//</span>
+            </div>
+            <div class="nav-links">
+                <span><i class="fas fa-tag"></i> Archive</span>
+                <span><i class="fas fa-shipping-fast"></i> Express</span>
+                <span><i class="fas fa-shield-alt"></i> Lifetime</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="product-container">
+        <div class="product-grid">
+            <!-- LEFT COLUMN: IMAGES -->
+            <div class="gallery-section">
+                <div class="main-image" id="mainImageContainer">
+                    <img id="mainProductImage" src="https://i.ibb.co/BhzBgKC/file-00000000dd0871fa894c535f34655a54.jpg" alt="Toji Fushiguro Oversized T-Shirt">
+                </div>
+                <div class="thumbnail-strip">
+                    <div class="thumb active" data-img="https://i.ibb.co/BhzBgKC/file-00000000dd0871fa894c535f34655a54.jpg">
+                        <img src="https://i.ibb.co/BhzBgKC/file-00000000dd0871fa894c535f34655a54.jpg" alt="Front view product">
+                    </div>
+                    <div class="thumb" data-img="https://i.ibb.co/3yzn6TCn/file-00000000dd0871fa894c535f34655a54.jpg">
+                        <img src="https://i.ibb.co/3yzn6TCn/file-00000000dd0871fa894c535f34655a54.jpg" alt="Back view product">
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: PRODUCT INFO -->
+            <div class="info-section">
+                <div class="badge">DESHI EXCLUSIVE • LAST DROP</div>
+                <h1>Anime India Jujutsu Kaisen — Toji Fushiguro Cotton Oversized Round Neck</h1>
+                <div class="price">
+                    <span class="current-price"><span class="currency">₹</span>499</span>
+                    <span class="original-price">₹1,299</span>
+                </div>
+                <div class="tax-note"><i class="fas fa-check-circle"></i> Inclusive of taxes + Free Shipping</div>
+
+                <div class="description">
+                    <p>Embody the raw power of the Sorcerer Killer with the <strong>Toji Fushiguro Oversized Tee</strong>. Crafted from premium 100% combed cotton, this round-neck piece features a bold manga panel graphic, relaxed silhouette, and extreme breathability. Made for the modern streetwear connoisseur.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> 100% combed ring-spun cotton | 280 GSM</li>
+                        <li><i class="fas fa-check-circle"></i> Oversized streetwear silhouette</li>
+                        <li><i class="fas fa-check-circle"></i> High-definition print — fade resistant</li>
+                        <li><i class="fas fa-check-circle"></i> Pre-shrunk fabric, true oversized fit</li>
+                        <li><i class="fas fa-check-circle"></i> Ethically sourced, India exclusive</li>
+                    </ul>
+                </div>
+
+                <!-- ORDER FORM with professionally enhanced "S" size section (visually elevated, only XL) -->
+                <div class="order-form">
+                    <form id="purchaseForm">
+                        <div class="form-group">
+                            <label for="fullName"><i class="far fa-user"></i> Full name</label>
+                            <input type="text" id="fullName" name="fullName" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="far fa-envelope"></i> Email address</label>
+                            <input type="email" id="email" name="email" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone"><i class="fab fa-whatsapp"></i> WhatsApp number</label>
+                            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                        </div>
+                        
+                        <!-- Visually appealing "S" size section (only XL but with premium styling) -->
+                        <div class="size-premium">
+                            <div class="size-header-premium">
+                                <i class="fas fa-tshirt"></i>
+                                <span>Available size — limited inventory</span>
+                            </div>
+                            <div class="size-available-card">
+                                <div class="size-xl-badge">
+                                    <span class="size-letter">XL</span>
+                                    <span class="size-label">OVERSIZED FIT</span>
+                                </div>
+                                <div class="stock-warning">
+                                    <i class="fas fa-bolt"></i> Only few units
+                                </div>
+                            </div>
+                            <div class="size-footnote">
+                                <i class="fas fa-ruler-combined"></i> Chest 44-46" | Length 30.5" | Only XL remains (final batch)
+                            </div>
+                        </div>
+                        <input type="hidden" id="selectedSizeInput" name="selectedSize" value="XL">
+
+                        <div class="form-group">
+                            <label for="address"><i class="fas fa-map-marker-alt"></i> Delivery address</label>
+                            <input type="text" id="address" name="address" required autocomplete="shipping street-address">
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode"><i class="fas fa-location-dot"></i> PIN code</label>
+                            <input type="text" id="pincode" name="pincode" required autocomplete="postal-code">
+                        </div>
+                        <button type="button" id="completePurchaseBtn" class="purchase-btn">
+                            <i class="fab fa-whatsapp"></i> Complete purchase · ₹499 (XL)
+                        </button>
+                        <div class="secure-checkout">
+                            <i class="fas fa-shield-alt"></i> 100% secure • order details sent via WhatsApp
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            DESHI © 2025 — Anime India Collective. Premium streetwear meets authenticity.
+        </footer>
+    </div>
+
+    <script>
+        (function() {
+            // Image Gallery Switching
+            const mainImg = document.getElementById('mainProductImage');
+            const thumbs = document.querySelectorAll('.thumb');
+            
+            function setActiveThumb(activeThumb) {
+                thumbs.forEach(thumb => thumb.classList.remove('active'));
+                activeThumb.classList.add('active');
+                const newSrc = activeThumb.getAttribute('data-img');
+                if (newSrc) {
+                    mainImg.src = newSrc;
+                }
+            }
+
+            thumbs.forEach(thumb => {
+                thumb.addEventListener('click', () => setActiveThumb(thumb));
+            });
+
+            // Preload images for smoothness
+            const imgUrls = [
+                'https://i.ibb.co/BhzBgKC/file-00000000dd0871fa894c535f34655a54.jpg',
+                'https://i.ibb.co/3yzn6TCn/file-00000000dd0871fa894c535f34655a54.jpg'
+            ];
+            imgUrls.forEach(src => { const img = new Image(); img.src = src; });
+
+            // Helper: Format WhatsApp order summary (professional)
+            function buildWhatsAppMessage() {
+                const fullName = document.getElementById('fullName').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const address = document.getElementById('address').value.trim();
+                const pincode = document.getElementById('pincode').value.trim();
+                const size = 'XL'; // fixed
+
+                if (!fullName || !email || !phone || !address || !pincode) {
+                    return null;
+                }
+
+                // validations
+                const emailPattern = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
+                if (!emailPattern.test(email)) {
+                    alert("❌ Please enter a valid email address.");
+                    return null;
+                }
+                const phoneDigits = phone.replace(/\D/g, '');
+                if (phoneDigits.length < 10 || phoneDigits.length > 15) {
+                    alert("❌ Enter a valid 10-digit WhatsApp number.");
+                    return null;
+                }
+                if (!/^\d{6}$/.test(pincode)) {
+                    alert("❌ Please enter a valid 6-digit PIN code.");
+                    return null;
+                }
+                if (address.length < 8) {
+                    alert("❌ Please provide a complete delivery address.");
+                    return null;
+                }
+
+                const product = "Anime India Jujutsu Kaisen - Toji Fushiguro Cotton Oversized Round Neck";
+                const amount = "₹499";
+                
+                let msg = "🛒 *DESHI ORDER #" + Math.floor(100000 + Math.random() * 900000) + "*%0A";
+                msg += "━━━━━━━━━━━━━━━━━━━━%0A";
+                msg += `👕 *Product:* ${product}%0A`;
+                msg += `📐 *Size:* XL (oversized) | Only size available%0A`;
+                msg += `💰 *Total:* ${amount} (incl. taxes & free shipping)%0A`;
+                msg += "━━━━━━━━━━━━━━━━━━━━%0A";
+                msg += `🧑‍💻 *Customer:* ${fullName}%0A`;
+                msg += `📧 *Email:* ${email}%0A`;
+                msg += `📞 *WhatsApp:* ${phone}%0A`;
+                msg += `🏡 *Address:* ${address}%0A`;
+                msg += `📍 *PIN Code:* ${pincode}%0A`;
+                msg += "━━━━━━━━━━━━━━━━━━━━%0A";
+                msg += `📅 *Placed on:* ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}%0A`;
+                msg += "💳 *Payment:* Cash on Delivery / UPI at doorstep%0A";
+                msg += "✅ *Please confirm availability & dispatch timeline.*%0A";
+                msg += "━━━━━━━━━━━━━━━━━━━━%0A";
+                msg += "🔥 DESHI × JUJUTSU KAISEN — Thank you for your order!";
+                return msg;
+            }
+
+            const purchaseBtn = document.getElementById('completePurchaseBtn');
+            purchaseBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const message = buildWhatsAppMessage();
+                if (!message) {
+                    alert("📋 Please fill in all required fields: Full Name, Email, WhatsApp, Address, PIN Code.");
+                    return;
+                }
+                const phoneNumber = '8812826218';
+                const cleanNumber = phoneNumber.replace(/\D/g, '');
+                const waLink = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
+                window.open(waLink, '_blank');
+            });
+
+            // input cleaning
+            document.getElementById('pincode').addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^0-9]/g, '').slice(0,6);
+            });
+            document.getElementById('phone').addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^0-9+]/g, '').slice(0,15);
+            });
+        })();
+    </script>
+</body>
+</html>
