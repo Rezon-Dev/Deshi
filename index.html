@@ -519,13 +519,13 @@
             <!-- LEFT COLUMN: IMAGES -->
             <div class="gallery-section">
                 <div class="main-image" id="mainImageContainer">
-                    <img id="mainProductImage" src="https://i.ibb.co/BhzBgKC/file-00000000dd0871fa894c535f34655a54.jpg" alt="Toji Fushiguro Oversized T-Shirt">
+                    <img id="mainProductImage" src="back.png" alt="Toji Fushiguro Oversized T-Shirt">
                 </div>
                 <div class="thumbnail-strip">
-                    <div class="thumb active" data-img="https://i.ibb.co/BhzBgKC/file-00000000dd0871fa894c535f34655a54.jpg">
+                    <div class="thumb active" data-img="back.png">
                         <img src="back.png" alt="Front view product">
                     </div>
-                    <div class="thumb" data-img="https://i.ibb.co/3yzn6TCn/file-00000000dd0871fa894c535f34655a54.jpg">
+                    <div class="thumb" data-img="front.png>
                         <img src="front.png" alt="Back view product">
                     </div>
                 </div>
@@ -633,8 +633,8 @@
 
             // Preload images for smoothness
             const imgUrls = [
-                'https://i.ibb.co/BhzBgKC/file-00000000dd0871fa894c535f34655a54.jpg',
-                'https://i.ibb.co/3yzn6TCn/file-00000000dd0871fa894c535f34655a54.jpg'
+                'back.png',
+                'front.png'
             ];
             imgUrls.forEach(src => { const img = new Image(); img.src = src; });
 
@@ -702,7 +702,7 @@
                     alert("📋 Please fill in all required fields: Full Name, Email, WhatsApp, Address, PIN Code.");
                     return;
                 }
-                const phoneNumber = '8812826218';
+                const phoneNumber = '918812826218';
                 const cleanNumber = phoneNumber.replace(/\D/g, '');
                 const waLink = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
                 window.open(waLink, '_blank');
